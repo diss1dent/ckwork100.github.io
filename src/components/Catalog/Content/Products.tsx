@@ -2,8 +2,8 @@ import {connect, ConnectedProps} from "react-redux";
 
 const Products = (props: PropsFromRedux) => {
     return (
-        <div>
-        </div>
+      <div>
+      </div>
     );
 }
 type PropsFromRedux = ConnectedProps<typeof connector>

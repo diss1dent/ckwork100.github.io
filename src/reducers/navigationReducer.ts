@@ -1,11 +1,22 @@
 import * as types from '../actions/actionTypes';
 import {PayloadAction} from "@reduxjs/toolkit";
 
+export interface MenuItem {
+    title: string,
+    route: string
+}
+
 const initialState = {
     activeMenu: "",
     menu: [
-        "Кукурудза",
-        "Ріпак озимий"
+        {
+            title: "Кукурудза",
+            route: 'corn'
+        },
+        {
+            title: "Ріпак озимий",
+            route: 'rapeseed'
+        }
     ]
 };
 

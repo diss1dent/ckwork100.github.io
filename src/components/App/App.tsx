@@ -1,17 +1,10 @@
 import React from 'react';
-import Sidebar from "./Sidebar/Sidebar";
+import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
     <div className="app">
-        <div className="card">
-            <div className="card-sidebar">
-                <Sidebar/>
-            </div>
-            <div className="card-content">
-
-            </div>
-        </div>
+      <AppRoutes/>
     </div>
   );
 }
