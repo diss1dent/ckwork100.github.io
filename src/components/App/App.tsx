@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
+import Sidebar from "./Sidebar/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-        <div className="app">
-            <div className="card">
-                1111
+    <div className="app">
+        <div className="card">
+            <div className="card-sidebar">
+                <Sidebar/>
+            </div>
+            <div className="card-content">
+
             </div>
         </div>
     </div>
