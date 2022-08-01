@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar/Sidebar";
+import Category from "./Content/Category";
 
 const Catalog = () => {
   return (
@@ -9,7 +10,7 @@ const Catalog = () => {
           <Sidebar/>
         </div>
         <div className="card-content">
-
+          <Category/>
         </div>
       </div>
     </div>

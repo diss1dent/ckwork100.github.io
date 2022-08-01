@@ -1,18 +1,33 @@
-import {connect, ConnectedProps} from "react-redux";
+import React from "react";
+import {connect, ConnectedProps,} from "react-redux";
+import {Product as ProductInterface} from "../../../data/categoryInterface";
+import Product from "./Product";
 
-const Products = (props: PropsFromRedux) => {
-    return (
-      <div>
-      </div>
-    );
+interface OwnProps { products: ProductInterface[] }
+
+const Products = (props: PropsFromRedux & OwnProps) => {
+  const {products} = props;
+  return (
+    <ul>
+      {
+        products.map((product: ProductInterface, index: number) => {
+          return <li key={index}>
+            <Product item={product}/>
+          </li>
+        })
+      }
+    </ul>
+  );
 }
+
 type PropsFromRedux = ConnectedProps<typeof connector>
-const stateToProps = () => {
 
-}
-const dispatchToProps = () => {
+const mapStateToProps = () => ({
+})
 
-}
+const mapDispatchToProps = () => ({
 
-const connector = connect(stateToProps, dispatchToProps);
+})
+
+const connector = connect(mapStateToProps, mapDispatchToProps);
 export default connector(Products);

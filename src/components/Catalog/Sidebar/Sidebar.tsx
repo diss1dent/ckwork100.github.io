@@ -1,16 +1,16 @@
 import React from "react";
-import {RootState} from "../../../store";
 import {connect, ConnectedProps} from "react-redux";
-import {setActiveMenu} from "../../../actions/navigationFunctions";
 import { useNavigate } from "react-router-dom";
-import {MenuItem} from "../../../reducers/navigationReducer";
+import {MenuItem} from "../../../state/interfaces/navigationIntefaces";
+import {RootState} from "../../../state/store";
+import {setActiveMenu} from "../../../state/action-creators/navigationFunctions";
 
 const Sidebar = (props: PropsFromRedux) => {
   const {menu, activeMenu, setActiveMenu} = props;
   let navigate = useNavigate();
 
   const handleClick = (menuItem: MenuItem) => {
-    setActiveMenu(menuItem.route);
+    setActiveMenu(menuItem);
     navigate (menuItem.route);
   }
   return (
@@ -18,7 +18,7 @@ const Sidebar = (props: PropsFromRedux) => {
       <ul className={"sidebar-list"}>
         {
           menu.map((menuItem: MenuItem, index: number) => {
-            const isActive = activeMenu === menuItem.route
+            const isActive = activeMenu.route === menuItem.route
             return (
               <li key={index}
                   className={"sidebar-item" + (isActive ? " sidebar-item__active" : "")}
