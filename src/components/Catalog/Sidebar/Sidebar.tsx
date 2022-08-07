@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {MenuItem} from "../../../state/interfaces/navigationIntefaces";
 import {RootState} from "../../../state/store";
 import {setActiveMenu} from "../../../state/action-creators/navigationFunctions";
+import {SITE_URL} from "../../../constants";
 
 const Sidebar = (props: PropsFromRedux) => {
   const {menu, activeMenu, setActiveMenu} = props;
@@ -11,7 +12,7 @@ const Sidebar = (props: PropsFromRedux) => {
 
   const handleClick = (menuItem: MenuItem) => {
     setActiveMenu(menuItem);
-    navigate(menuItem.route);
+    navigate(SITE_URL + menuItem.route);
   }
   return (
     <div className={"sidebar"}>

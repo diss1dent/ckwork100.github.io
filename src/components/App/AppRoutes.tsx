@@ -12,8 +12,8 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={'/'} element={<Home/>}/>
-        <Route path={'catalog'} element={<Catalog/>}>
+        <Route path={SITE_URL + '/'} element={<Home/>}/>
+        <Route path={SITE_URL + '/catalog'} element={<Catalog/>}>
           <Route path={':slug'} element={<Catalog/>}/>
         </Route>
         <Route path="*" element={<NotFound/>}/>
