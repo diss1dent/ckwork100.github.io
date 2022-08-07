@@ -2,6 +2,10 @@
 @import "misc/fonts";
 @import "misc/ui";
 
+@import "mixins/_breakpoints";
+
 @import "components/app";
+@import "components/_home";
 @import "components/catalog";
+@import "components/product";
 @import "components/sidebar";

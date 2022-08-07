@@ -1,7 +1,7 @@
 import React from "react";
 import {connect, ConnectedProps} from "react-redux";
 import {getCategoryProducts} from "./ProductsFunctions";
-import Products from "./Products";
+import CategoryItems from "./CategoryItems";
 import {RootState} from "../../../state/store";
 
 const Category = (props: PropsFromRedux) => {
@@ -9,7 +9,7 @@ const Category = (props: PropsFromRedux) => {
   const category = getCategoryProducts(activeMenu.category);
   return (
     <div>
-      <Products products={category.products}/>
+      <CategoryItems products={category.products}/>
     </div>
   );
 }

@@ -1,18 +1,18 @@
 import React from "react";
 import {connect, ConnectedProps,} from "react-redux";
 import {Product as ProductInterface} from "../../../data/categoryInterface";
-import Product from "./Product";
+import CategoryItem from "./CategoryItem";
 
 interface OwnProps { products: ProductInterface[] }
 
-const Products = (props: PropsFromRedux & OwnProps) => {
+const CategoryItems = (props: PropsFromRedux & OwnProps) => {
   const {products} = props;
   return (
     <ul>
       {
         products.map((product: ProductInterface, index: number) => {
           return <li key={index}>
-            <Product item={product}/>
+            <CategoryItem item={product}/>
           </li>
         })
       }
@@ -30,4 +30,4 @@ const mapDispatchToProps = () => ({
 })
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
-export default connector(Products);
+export default connector(CategoryItems);

@@ -6,6 +6,8 @@ body {
   //sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $black;
+  font-size: $baseFontSize;
 }
 
 code {
@@ -13,6 +15,22 @@ code {
   monospace;
 }
 
+img {
+  display: block;
+}
+
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: $h1FontSize;
+  margin: 15px 10px;
+}
+
+h2 {
+  font-size: $h2FontSize;
+  margin: 15px 10px;
 }

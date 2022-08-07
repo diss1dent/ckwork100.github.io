@@ -5,28 +5,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 65px;
+  @include md {
+    min-width: 175px;
+  }
 
   &-list {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    position: absolute;
     padding: 0 0 0 10px;
+
+    -webkit-transform-origin: left top;
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+    transform: rotate(-90deg) translateX(-50%);
   }
   &-item {
-    width: 100%;
-    padding: 10px 0;
+    //width: 100%;
+    padding: 20px 20px;
     font-size: 26px;
+    white-space: nowrap;
     transition: $transition;
-
+    cursor: pointer;
+    @include md {
+      padding: 35px 20px;
+    }
     &__active {
       background-color: $white;
-      color: $green;
+      color: $primary;
     }
   }
   &-curved {
     position: absolute;
     top: 100px;
     right: 0;
+    display: none;
+    @include md {
+      display: block;
+    }
 
     &__svg {
       //filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));

@@ -10,12 +10,12 @@ export const PRODUCT_CATEGORIES = {
 export const MENU_ITEMS:MenuItem[] = [
     {
         title: 'Кукурудза',
-        route: 'corn',
+        route: '/catalog/corn',
         category: PRODUCT_CATEGORIES.corn
     },
     {
         title: 'Ріпак озимий',
-        route: 'rapeseed',
+        route: '/catalog/rapeseed',
         category: PRODUCT_CATEGORIES.rapeseed
     }
 ]

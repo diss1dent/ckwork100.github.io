@@ -1,6 +1,6 @@
 import React from "react";
 import {connect, ConnectedProps} from "react-redux";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {MenuItem} from "../../../state/interfaces/navigationIntefaces";
 import {RootState} from "../../../state/store";
 import {setActiveMenu} from "../../../state/action-creators/navigationFunctions";
@@ -11,7 +11,7 @@ const Sidebar = (props: PropsFromRedux) => {
 
   const handleClick = (menuItem: MenuItem) => {
     setActiveMenu(menuItem);
-    navigate (menuItem.route);
+    navigate(menuItem.route);
   }
   return (
     <div className={"sidebar"}>
@@ -30,12 +30,14 @@ const Sidebar = (props: PropsFromRedux) => {
           })
         }
       </ul>
-      <div className="sidebar-curved">
-        <svg height="210" width="100" className={"sidebar-curved__svg"}>
-          <path stroke="" fill="#f8f8f8" d="M 100 200 Q -50 100 100 0 "/>
-          <circle fill="#0c7b3e" cx="50" cy="100" r="10"/>
-        </svg>
-      </div>
+      {/*<div className="sidebar-curved">*/}
+      {/*  <svg height="210" width="100" className={"sidebar-curved__svg"}>*/}
+      {/*    <path stroke="" fill="#f8f8f8" d="M 100 200 Q -50 100 100 0 "/>*/}
+      {/*    <circle fill="#0c7b3e" cx="50" cy="100" r="10"/>*/}
+      {/*    <circle fill="#9eb63b" cx="50" cy="100" r="10"/>*/}
+      {/*    <circle fill="#719248" cx="50" cy="100" r="10"/>*/}
+      {/*  </svg>*/}
+      {/*</div>*/}
     </div>
   )
 }
