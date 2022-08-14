@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $black;
   font-size: $baseFontSize;
+  box-sizing: border-box;
 }
 
 code {
@@ -33,4 +34,12 @@ h1 {
 h2 {
   font-size: $h2FontSize;
   margin: 15px 10px;
+}
+
+a {
+  color: $third;
+  text-decoration: none;
+  &:link, &:visited, &:hover {
+
+  }
 }

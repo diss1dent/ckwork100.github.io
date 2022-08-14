@@ -12,7 +12,7 @@ const Catalog = () => {
       <div className="card">
         <div className="card-sidebar">
           <Link to={SITE_URL} className={"card-sidebar__toplink"} >
-            <HomeIcon color='secondary' sx={{ color: 'primary', fontSize: 50 }}/>
+            <HomeIcon color='secondary' sx={{ color: 'white', fontSize: 50 }}/>
             {/*<AppsIcon sx={{ fontSize: 50 }}/>*/}
           </Link>
           <Sidebar/>

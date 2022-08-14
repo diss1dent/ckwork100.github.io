@@ -1,3 +1,6 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/reset-css/reset.css';
+
 @import "misc/constants";
 @import "misc/fonts";
 @import "misc/ui";
@@ -5,6 +8,7 @@
 @import "mixins/_breakpoints";
 
 @import "components/app";
+@import "components/_header";
 @import "components/_home";
 @import "components/catalog";
 @import "components/product";

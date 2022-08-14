@@ -13,7 +13,7 @@ const CategoryItem = (props: PropsFromRedux & OwnProps) => {
   return (
     <div className={"product"}>
       <div className={"product-image"}>
-        <img src={item.image } alt=""/>
+        <img src={SITE_URL + item.image } alt=""/>
       </div>
       <div className={"product-content"}>
         <div className={"product-title"}>
