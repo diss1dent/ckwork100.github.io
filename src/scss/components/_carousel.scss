@@ -1,0 +1,56 @@
+.swiper {
+  &-wrapper {
+    align-items: flex-end;
+  }
+  &-slide {
+    display: flex;
+    align-items: flex-end;
+
+    &-active {
+      width: 420px!important;
+      .swiper-slide {
+        &__container {
+          width: 420px;
+          height: 500px;
+        }
+        &__box {
+          width: 300px;
+          height: 275px;
+        }
+        &__image {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+    &__title {
+      padding: 5px;
+    }
+    &__container {
+      width: 220px;
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    &__box {
+      background-color: $third;
+      color: $white;
+      width: 200px;
+      height: 175px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+    &__image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      top: 35px;
+      right: 65px;
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}

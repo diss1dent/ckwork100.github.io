@@ -1,6 +1,7 @@
 import React from "react";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import {Link} from "react-router-dom";
+import Carousel from "./Carousel";
 
 const Catalog = () => {
   return (
@@ -35,6 +36,7 @@ const Catalog = () => {
             </div>
           </div>
           <div className="product-slider">
+            <Carousel />
           </div>
         </div>
 
