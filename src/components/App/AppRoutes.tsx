@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -10,7 +10,7 @@ import Catalog from "../Catalog/Catalog";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path={SITE_URL + '/'} element={<Home/>}/>
         <Route path={SITE_URL + '/catalog'} element={<Catalog/>}>
@@ -18,7 +18,7 @@ const AppRoutes = () => {
         </Route>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

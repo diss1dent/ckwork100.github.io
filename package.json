@@ -2,8 +2,9 @@
   "name": "legobiotech",
   "version": "0.1.0",
   "private": true,
-  "homepage2": "/",
-  "homepage": "https://diss1dent.github.io/ckwork100.github.io/",
+  "homepage": "http://legobiotech.com.ua/",
+  "homepage3": "/",
+  "homepage2": "https://diss1dent.github.io/ckwork100.github.io/",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",

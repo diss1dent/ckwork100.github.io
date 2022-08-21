@@ -20,7 +20,7 @@ const Carousel = () => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       autoplay={{
-        delay: 300000,
+        delay: 3000000,
         disableOnInteraction: false
       }}
       breakpoints={{
